@@ -1,9 +1,11 @@
+import { CircularProgress } from '@mui/material';
+
 function Loader() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-100 to-red-200">
-      <div className="text-red-700 text-xl animate-pulse font-semibold">Loading...</div>
+    <div className="fixed inset-0 flex items-center justify-center bg-[#f5f5f5] z-[9999]">
+      <CircularProgress size={40} color="error" />
     </div>
-  )
+  );
 }
 
 export default Loader;

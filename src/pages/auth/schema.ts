@@ -5,7 +5,7 @@ export const loginValidationSchema = Yup.object({
     .email('Invalid Email')
     .required('Email is obrigatory'),
   password: Yup.string()
-    .min(6, 'The password must have at least 6 digiters')
+    .min(5, 'The password must have at least 5 digiters')
     .required('Password is obrigatory'),
 });
 
@@ -16,6 +16,6 @@ export const registerValidationSchema = Yup.object({
     .email('Invalid Email')
     .required('Email is obrigatory'),
   password: Yup.string()
-    .min(6, 'The password must have at least 6 digiters')
+    .min(5, 'The password must have at least 5 digiters')
     .required('Password is obrigatory'),
 });

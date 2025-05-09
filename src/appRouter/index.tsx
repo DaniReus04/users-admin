@@ -12,13 +12,17 @@ const NotFound = lazy(() => import('../pages/notFound'));
 const AppRouter = createBrowserRouter([
   {
     path: '/',
-    element: (
-      <Suspense fallback={<Loader />}>
-        <Login />
-      </Suspense>
-    ),
     errorElement: <ErrorPage />,
     children: [
+      {
+        path: '/',
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Login />
+          </Suspense>
+        ),
+        errorElement: <ErrorPage />,
+      },
       {
         path: '/home',
         element: (
